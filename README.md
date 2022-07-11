@@ -1,3 +1,3 @@
 # jonwritescode-website
 
-<br>Created with HTML, CSS and JS
+<br>Created with HTML, CSS, JS and JQuery
