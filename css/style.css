@@ -1,0 +1,533 @@
+/*
+
+
+	CSS STRUCTURE
+	-----------------
+	01. Import Font Family
+	02. CSS Reset
+	03. General Settings
+	04. Header Settings
+	05. About Settings
+	06. Portfolio Settings
+	07. Contact Settings
+	08. Footer Settings
+	09. Responsive Settings
+*/
+
+/* 01 IMPORT FONT FAMILY
+--------------------------------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+
+/* 02 CSS RESET
+--------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 03 GENERAL SETTINGS
+--------------------------------------------------------------- */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clear{
+	clear: both;
+}
+
+body {
+	background: #fff;
+	font: 300 14px 'Open Sans', sans-serif;
+	text-align: center;
+	color: #999;
+}
+
+p {
+	line-height: 2;
+}
+
+a {
+	color: #a67d4a;
+	text-decoration: none;
+	-webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	-ms-transition: all 300ms linear;
+	transition: all 300ms linear
+}
+
+a:hover { color: #999; }
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+/* Section Titles */
+.section_title {
+	margin: 0 0 15px 0;
+	color: #a67d4a;
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+}
+
+.section_subtitle {
+	margin: 0 0 50px 0;
+	font: italic 18px 'Open Sans', sans-serif;
+	text-transform: none;
+}
+
+/* Containers */
+.container_small, .container_big {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container_small {max-width: 900px;}
+.container_big {max-width: 1050px;}
+
+/* Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+ 
+.fade-in.cmon {
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+/* 04 HEADER SETTINGS
+--------------------------------------------------------------- */
+
+#welcome {
+	background: url('../../../images/background.png') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+	position: relative;
+}
+
+.fade {
+	background: rgba(25,25,25, 0.6);
+	width: 100%;
+	height: 100%;
+}
+
+/* Header Titles */
+.header_title {
+	color: #fff;
+	font-size: 24px;
+	letter-spacing: 6px;
+	margin: 0 0 10px 0;
+}
+
+.header_subtitle {
+	color: #a67d4a;
+	font-size: 14px;
+	letter-spacing: 6px;
+}
+
+/* Vertical centering */
+.parent {display: table;}
+
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Navigation */
+nav a {
+	display: block;
+	height: 33.3333vh;
+	line-height: 33.3333vh;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 24px;
+	letter-spacing: 6px;
+}
+
+nav a:hover { 
+	color: #191919;
+	background: #a67d4a
+}
+
+nav ul {
+	background: #191919;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+
+nav ul li:hover {
+	background: #a67d4a;
+}
+
+.hide { display: none }
+
+.burger {
+	background: rgba(25,25,25, 0.5);
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	cursor: pointer;
+	border: 2px solid #a67d4a;
+}
+
+/* 05 ABOUT SETTINGS
+--------------------------------------------------------------- */
+
+#about { padding: 100px 50px; }
+
+.button {
+	margin: 50px 0 0;
+	padding: 0 20px;
+	height: 50px;
+	line-height: 50px;
+	border: 2px solid #a67d4a;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	-webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	-ms-transition: all 300ms linear;
+	transition: all 300ms linear
+}
+
+.button:hover {
+	background: #a67d4a;
+	color: #fff;
+}
+
+/* 06 PORTFOLIO SETTINGS
+--------------------------------------------------------------- */
+
+#portfolio {
+	background: #f5f5f5;
+	padding: 100px 50px 75px; 
+}
+
+.works {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	-webkit-flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	-webkit-align-content: space-between;
+}
+
+.works article {
+	position: relative;
+	align-items: center;
+	background: #fff;
+	flex: 0 0 31.5%;
+	-webkit-flex: 0 0 31.5%;
+	margin: 0 0 25px;
+	overflow: hidden;
+	border: 1px solid #e1e1e1;
+}
+
+.border {
+	border:5px solid #fff;
+	overflow: hidden;
+}
+
+.works  a:hover {
+	color: #a67d4a;
+}
+
+.works img {
+	display: block;
+	-webkit-transition: all 1000ms linear;
+	-moz-transition: all 1000ms linear;
+	-o-transition: all 1000ms linear;
+	-ms-transition: all 1000ms linear;
+	transition: all 1000ms linear;
+	overflow: hidden;
+	box-shadow: #000 0 0 0;
+}
+
+.works img:hover {
+	-webkit-transform:scale(1.3);
+	-moz-transform:scale(1.3);
+	-ms-transform:scale(1.3);
+	-o-transform:scale(1.3);
+	transform:scale(1.3);
+	-webkit-transition: all 5000ms linear;
+	-moz-transition: all 5000ms linear;
+	-o-transition: all 5000ms linear;
+	-ms-transition: all 5000ms linear;
+	transition: all 5000ms linear;
+}
+
+
+.caption {
+	background: rgba(255,255,255, 0.85);
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #a67d4a;
+}
+
+/* 07 CONTACT SETTINGS
+--------------------------------------------------------------- */
+
+#contact { padding: 100px 50px; }
+
+.info {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	-webkit-flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	-webkit-align-content: space-between;
+	margin: 0 0 50px 0;
+}
+
+.info div {
+	flex: 0 0 31.5%;
+	-webkit-flex: 0 0 31.5%;
+	border-left: 1px solid #e1e1e1;
+	border-right: 1px solid #e1e1e1;	
+}
+
+.info div:first-child,
+.info div:last-child {
+	border: 0;
+}
+
+.info .fa {
+	font-size: 36px;
+	margin: 0 0 10px 0;
+}
+
+.info h3 {
+	color: #a67d4a;
+	margin: 0 0 15px 0;
+}
+
+/* Social icons */
+.social {
+	max-width: 250px;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	-webkit-flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	-webkit-align-content: space-between;
+	margin: 0 auto;
+}
+
+/*.social a {
+	flex: 0 0 30px;
+	-webkit-flex: 0 0 30px;
+	border: 2px solid #a67d4a;
+	height: 30px;
+	line-height: 26px;
+	font-size: 16px;
+	color: #a67d4a;
+	-webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	-ms-transition: all 300ms linear;
+	transition: all 300ms linear
+}*/
+
+.social a:hover {
+	/*background: #a67d4a;*/
+	color: #fff;
+}
+
+/* 08 FOOTER SETTINGS
+--------------------------------------------------------------- */
+
+footer {
+	background: #f5f5f5;
+}
+
+.container_footer {
+	width: 100%;
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 50px;
+	overflow: hidden;
+}
+
+footer p {
+	line-height: 1;
+}
+
+.left, .right {	width: 50%;}
+
+.left {
+	float: left;
+	text-align: left;
+}
+
+.left span {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+.right {
+	float: right;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.right a { color: #999 }
+
+.right a:hover { color: #a67d4a }
+
+/* 09 RESPONSIVE SETTINGS
+--------------------------------------------------------------- */
+
+/* Width */
+@media (max-width: 640px) {
+	.burger {
+		top: 25px;
+		left: 25px;
+	}
+
+	.section_subtitle { margin: 0 0 30px 0; }
+	#about, #contact { padding: 80px 25px; }
+	
+	#portfolio { padding: 80px 25px 65px; }
+	
+	.works article {
+		flex: 0 0 48%;
+		-webkit-flex: 0 0 48%;
+		margin: 0 0 15px;
+	}
+	
+	.container_footer { padding: 60px 25px; }
+}
+
+@media (max-width: 600px) {
+	.burger {
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+	}
+}
+
+@media (max-width: 480px) {
+	.works article {
+		flex: 0 0 100%;
+		-webkit-flex: 0 0 100%;
+	}
+	
+	.info div {
+		flex: 0 0 100%;
+		-webkit-flex: 0 0 100%;
+		padding: 20px 0;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 1px solid #e1e1e1;
+		border-top: 1px solid #e1e1e1;
+	}
+	
+	.info div:first-child { padding-top: 0;}
+
+	.info div:last-child { padding-bottom: 0;}
+
+	.info { margin: 0 0 35px 0; }
+		
+	.social { max-width: 200px; }
+}
+
+@media (max-width: 360px) {
+
+	.container_footer { padding: 30px 25px; }
+	.left, .right {
+		width: 100%;
+		text-align: center;
+	}
+	.left { padding: 0 0 15px 0;}
+}
+
+/* Height */
+@media (max-height: 568px) {
+	#welcome { height: 100vh; }
+}

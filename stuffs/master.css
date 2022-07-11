@@ -1,0 +1,9 @@
+
+
+h1, .imgs, h2, #Stats, #Results, p {
+  text-align: center;
+}
+
+#Results {
+  color: blue;
+}
